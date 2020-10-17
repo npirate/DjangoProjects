@@ -1,0 +1,27 @@
+pipenv install pipfile --everytime you install any library, it gets recorded in pipfile and versions and everything gets locked in pipfile.lock. So now system will use pipfile to reinstall all the dependancies.
+pipenv shell
+
+--work on your project including installing new packages--
+	App design
+		startapp, register in project/settings
+		design model, register in app/admin, migrate
+		create template, then view, then urls.py, update project/urls.py
+		update template
+
+project/settings.py > ALLOWED_HOSTS = ['*'] and other necessary for production.
+--update pipfile.lock
+pipenv lock
+create Procfile
+	web: gunicorn {projectname_project}.wsgi --log-file -
+git commit and push
+	git add -A
+	git commit -m 'added tests'
+	git push -u origin master --assuming that repository is cloned
+heroku login
+heroku git:remote -a {app_name} --for the first time only
+heroku config:set DISABLE_COLLECTSTATIC=1 --if needed
+git push heroku master
+heroku logs --tail --to view logs
+
+sa
+12345678
