@@ -25,7 +25,7 @@ SECRET_KEY = '9!umpnkjt3!1@^+r*dfofh+6p52%#s&t!(8bzl3$uz4e#0dggn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'AyurtantraMobile_Project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'API',
+        'NAME': 'AyurDB',
         'HOST': r'LTP232\SQLEXPRESS',
         'PORT': '',
         'USER': 'sa',
